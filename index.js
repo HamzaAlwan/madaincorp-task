@@ -60,9 +60,9 @@ const startMatch = (userFighter) => {
 
   // Update html data
   document.getElementById("cat_name").innerHTML =
-    fightDetails.cat.playerType === "user" ? "You" : "Enemy";
+    fightDetails.cat.playerType === "user" ? "You " : "Enemy ";
   document.getElementById("dog_name").innerHTML =
-    fightDetails.dog.playerType === "user" ? "You" : "Enemy";
+    fightDetails.dog.playerType === "user" ? "You " : "Enemy ";
 };
 
 const checkHealth = () => {
@@ -97,7 +97,10 @@ const hit = () => {
   let isCatCrit = crit >= cat.critChance;
   let isDogCrit = crit >= dog.critChance;
 
+  let catDamage = cat.attackPower + (isCatCrit ? cat.critChance : 0)
+  let dogDamage = dog.attackPower + (isDogCrit ? dog.critChance : 0)
+
   // After a user attack let the pc attack automatically;
-  dog.takeDamage(cat.attackpower + isCatCrit ? cat.critChance : 0);
-  cat.takeDamage(dog.attackpower + isDogCrit ? dog.critChance : 0);
+  dog.takeDamage(catDamage);
+  cat.takeDamage(dogDamage);
 };
