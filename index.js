@@ -2,15 +2,15 @@ class Cat {
   constructor(playerType) {
     this.attackPower = 14;
     this.playerType = playerType;
-    this.healthbar = 100;
+    this.healthBar = 100;
     this.critChance = 50;
     this.critDamage = 10;
   }
 
   takeDamage(damageTaken) {
-    this.healthbar -= damageTaken;
+    this.healthBar -= damageTaken;
     
-    // Update the healthbar
+    // Update the healthBar
     let catHealth = document.getElementById("cat_health");
     catHealth.value -= damageTaken;
 
@@ -23,15 +23,15 @@ class Dog {
   constructor(playerType) {
     this.attackPower = 10;
     this.playerType = playerType;
-    this.healthbar = 100;
+    this.healthBar = 100;
     this.critChance = 20;
     this.critDamage = 10;
   }
 
   takeDamage(damageTaken) {
-    this.healthbar -= damageTaken;
+    this.healthBar -= damageTaken;
 
-    // Update the healthbar
+    // Update the healthBar
     let dogHealth = document.getElementById("dog_health");
     dogHealth.value -= damageTaken;
 
@@ -67,12 +67,12 @@ const startMatch = (userFighter) => {
 
 const checkHealth = () => {
   // Check the health bar for the dog and the cat
-  if (cat.healthbar <= 0) {
-    alert(`${cat.playerType} have lost.`);
+  if (fightDetails.cat.healthBar <= 0) {
+    alert(`${fightDetails.cat.playerType} have lost.`);
     resetMatch();
   }
-  if (dog.healthbar <= 0) {
-    alert(`${dog.playerType} have lost.`);
+  if (fightDetails.dog.healthBar <= 0) {
+    alert(`${fightDetails.dog.playerType} have lost.`);
     resetMatch();
   }
 };
