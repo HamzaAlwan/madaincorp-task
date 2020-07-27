@@ -1,0 +1,82 @@
+body {
+  padding: 20px 100px;
+  text-align: center;
+}
+
+.title {
+  padding-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid #cat, 
+.grid #dog {
+  background-color: red;
+  height: 450px;
+  margin: 0 20px;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid #cat:hover,
+.grid #dog:hover {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.grid #cat h1,
+.grid #dog h1 {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+#cat {
+  background-image: url("https://i.pinimg.com/originals/bc/9b/f9/bc9bf9744b20fc1f70303e91f5cc39f6.png");
+}
+
+#dog {
+  background-image: url("https://topdogtips.com/wp-content/uploads/2017/05/fighting-dog-breeds.jpg");
+}
+
+#match-screen {
+  display: none;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  transition-duration: 0.4s;
+  padding: 20px;
+  width: 500px;
+  font-size: 20px;
+  font: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  border-radius: 15px;
+}
+
+.hit-btn {
+  border: 2px solid #4caf50;
+}
+
+.reset-btn {
+  border: 2px solid #008cba;
+}
+
+.hit-btn:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #008cba;
+  color: white;
+}
